@@ -1,0 +1,56 @@
+---
+import Python from "./icons/skills/Python.astro";
+import Django from "./icons/skills/Django.astro";
+import Tailwind from "./icons/skills/Tailwind.astro";
+import Html from "./icons/skills/Html.astro";
+import Css from "./icons/skills/Css.astro";
+import Javascript from "./icons/skills/Javascript.astro";
+import React from "./icons/skills/React.astro";
+import AstroDark from "./icons/skills/AstroDark.astro";
+import AstroLight from "./icons/skills/AstroLight.astro";
+import Json from "./icons/skills/Json.astro";
+import Postgresql from "./icons/skills/Postgresql.astro";
+import SkillCard from "./SkillCard.astro";
+import GitLight from "./icons/skills/GitLight.astro";
+import GitHub from "./icons/skills/Github.astro";
+---
+
+<div class="flex gap-6 justify-center flex-wrap">
+  <SkillCard text="+2 Años" name="Python">
+    <Python class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+2 Años" name="Django">
+    <Django class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+2 Años" name="JSON">
+    <Json class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+2 Años" name="PostgreSQL">
+    <Postgresql class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+3 Años" name="HTML">
+    <Html class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+3 Años" name="CSS">
+    <Css class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+2 Años" name="JavaScript">
+    <Javascript class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+2 Años" name="Tailwind">
+    <Tailwind class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+1 Año" name="React">
+    <React class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+1 Año" name="Astro">
+    <AstroDark class="w-20 h-20 hidden dark:block" />
+    <AstroLight class="w-20 h-20 block dark:hidden" />
+  </SkillCard>
+  <SkillCard text="+2 Años" name="Git">
+    <GitLight class="w-20 h-20" />
+  </SkillCard>
+  <SkillCard text="+2 Años" name="GitHub">
+    <GitHub class="w-20 h-20" />
+  </SkillCard>
+</div>

@@ -1,16 +1,16 @@
 ---
-import "@fontsource-variable/onest"
+import "@fontsource-variable/onest";
 
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import { ViewTransitions } from "astro:transitions"
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -51,6 +51,14 @@ const { description, title } = Astro.props
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+      }
+
+      .tooltip {
+        @apply invisible absolute;
+      }
+
+      .has-tooltip:hover .tooltip {
+        @apply visible z-50;
       }
 
       @media (prefers-reduced-motion: reduce) {

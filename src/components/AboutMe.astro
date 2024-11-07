@@ -1,38 +1,50 @@
 ---
- const personalImageAlt = "Miguel Ángel"
+const personalImageAlt = "Junior Ruiz";
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la
-      programación con un Amstrad, tenía 10 años. Actualmente estoy <strong
-        >liderando equipos de desarrollo en multinacionales</strong
-      >.
+      Me llamo Junior Ruiz pero puedes llamarme Junior. Empecé en la
+      programación gracias a un primo que me enseño ruby, tenía 14 años.
+      Actualmente estoy <strong>estudiando Ciencia de Datos</strong>.
     </p>
 
     <p>
-      Algunos de mis éxitos incluyen <strong
-        >colaborar con Mozilla para el desarrollo de las primeras apps en su
-        sistema FirefoxOS</strong
-      >. Aunque hoy está desaparecido fue un gran avance en el mundo del
-      desarrollo web.
+      A mis <strong id="age">18 años</strong>, Algunos de mis éxitos incluyen <strong
+        >graduarme de bachiller en ciencias con el mejor promedio de la toda
+        institución</strong
+      >. En la promoción 2021-2022 apróximadamente 200 estudiantes nos
+      graduamos, yo con un promedio general de <strong>19.92/20</strong>.
     </p>
 
     <p>
-      Como creador de contenido, <strong
-        >cuento con el canal de habla hispana más visto del mundo en la
-        categoría de <em class="italic">Software & Game Development</em> en Twitch</strong
-      >. Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el
-      acceso a contenido de calidad.
+      Aspiro a graduarme como <strong>Tecnólogo en Ciencia de Datos</strong> a mediados
+      del 2025 y a la par de ello, iniciar mis estudios en <strong
+        >Ingenieria Electrónica</strong
+      > y si todo sale bien, antes del 2030 poseer ambos títulos.
     </p>
   </div>
 
-  <img width="200" height="200" src="/me.png" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
-
+  <img
+    width="200"
+    height="200"
+    src="/me.webp"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+  />
 </article>
+
+<script is:inline>
+  const age = document.getElementById("age");
+  const currentYear = new Date().getFullYear();
+  age.textContent = `${currentYear - 2006} años`;
+</script>
 
 <!-- FRASES PROHIBIDAS EN VUESTRO PORTFOLIO
 

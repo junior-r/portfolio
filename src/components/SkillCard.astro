@@ -1,0 +1,23 @@
+---
+interface Props {
+  text: string;
+  name: string;
+}
+
+const { text, name } = Astro.props;
+---
+
+<div
+  class="flex flex-col justify-center gap-2 transition hover:scale-110 has-tooltip"
+  data-ripple-light="true"
+  data-tooltip-target=`tooltip-${name}`
+>
+  <slot />
+  <p class="text-center">{text}</p>
+  <div
+    data-tooltip=`tooltip-${name}`
+    class="absolute -translate-x-1/2 left-1/2 tooltip z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none"
+  >
+    {name}
+  </div>
+</div>
