@@ -6,13 +6,12 @@ import Html from "./icons/skills/Html.astro";
 import Css from "./icons/skills/Css.astro";
 import Javascript from "./icons/skills/Javascript.astro";
 import React from "./icons/skills/React.astro";
-import AstroDark from "./icons/skills/AstroDark.astro";
-import AstroLight from "./icons/skills/AstroLight.astro";
 import Json from "./icons/skills/Json.astro";
 import Postgresql from "./icons/skills/Postgresql.astro";
 import SkillCard from "./SkillCard.astro";
 import GitLight from "./icons/skills/GitLight.astro";
 import GitHub from "./icons/skills/Github.astro";
+import AstroIcon from "./icons/skills/AstroIcon.astro";
 ---
 
 <div class="flex gap-6 justify-center flex-wrap">
@@ -44,8 +43,7 @@ import GitHub from "./icons/skills/Github.astro";
     <React class="w-20 h-20" />
   </SkillCard>
   <SkillCard text="+1 Año" name="Astro">
-    <AstroDark class="w-20 h-20 hidden dark:block" />
-    <AstroLight class="w-20 h-20 block dark:hidden" />
+    <AstroIcon extraClassName="w-20 h-20" />
   </SkillCard>
   <SkillCard text="+2 Años" name="Git">
     <GitLight class="w-20 h-20" />

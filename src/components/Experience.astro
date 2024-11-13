@@ -1,5 +1,17 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+import HTMLIcon from "./icons/skills/Html.astro";
+import CSS from "./icons/skills/Css.astro";
+import JavaScript from "./icons/skills/Javascript.astro";
+import React from "./icons/skills/React.astro";
+import Tailwind from "./icons/skills/Tailwind.astro";
+import Python from "./icons/skills/Python.astro";
+import Django from "./icons/skills/Django.astro";
+import Postgresql from "./icons/skills/Postgresql.astro";
+import Json from "./icons/skills/Json.astro";
+import Git from "./icons/skills/GitLight.astro";
+import Github from "./icons/skills/Github.astro";
+import AstroIcon from "./icons/skills/AstroIcon.astro";
 const EXPERIENCE = [
   {
     date: "Septiembre 2024 - Octubre 2024",
@@ -8,6 +20,7 @@ const EXPERIENCE = [
     description:
       "Desarrollo de una landing page para una agencia de viajes. Esta landing page permite a los usuarios ver los destinos turísticos disponibles y contactar a la agencia para reservar un viaje.",
     link: "https://easyxplorer.vacations/",
+    tecnologies: [HTMLIcon, CSS, JavaScript, React, Tailwind, Git, Github],
   },
   {
     date: "Abril 2024 - Septiembre 2024",
@@ -16,6 +29,18 @@ const EXPERIENCE = [
     description:
       "Desarrollo de una aplicación web para la gestión de inventario y ventas de una empresa de alimentos. Esta aplicación permitía a los empleados llevar un control de los productos en stock, realizar ventas y generar reportes de ventas.",
     link: "https://agrovenca.com/",
+    tecnologies: [
+      HTMLIcon,
+      CSS,
+      JavaScript,
+      Tailwind,
+      Python,
+      Django,
+      Postgresql,
+      Json,
+      Git,
+      Github,
+    ],
   },
   {
     date: "Diciembre 2023 - Enero 2024",
@@ -24,6 +49,7 @@ const EXPERIENCE = [
     description:
       "Desarrollo de una landing page para una empresa de servicios de internet. Esta landing page permitía a los usuarios ver los planes de internet disponibles y contactar a la empresa para contratar un plan.",
     link: "https://www.msnet.com.ve/",
+    tecnologies: [HTMLIcon, CSS, JavaScript, AstroIcon, Tailwind, Git, Github],
   },
   {
     date: "Febrero 2023 - Julio 2024",
@@ -31,6 +57,18 @@ const EXPERIENCE = [
     company: "Tecnológico Deming",
     description:
       "Desarrollo de una aplicación web para educación online (cursos). Esta aplicación permitía a los estudiantes realizar quizzes en linea y ver videos de las clases. También implementaba una pasarela de pagos para la compra de los cursos.",
+    tecnologies: [
+      HTMLIcon,
+      CSS,
+      JavaScript,
+      Tailwind,
+      Python,
+      Django,
+      Postgresql,
+      Json,
+      Git,
+      Github,
+    ],
   },
 ];
 ---
