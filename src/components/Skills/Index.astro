@@ -1,0 +1,27 @@
+---
+import Frontend from "./Frontend.astro";
+import Backend from "./Backend.astro";
+import Database from "./Database.astro";
+import Versioning from "./Versioning.astro";
+
+const iconSize = "w-14 md:w-20 h-14 md:h-20";
+---
+
+<div class="grid md:gap-6 grid-cols-1 md:grid-cols-2 mx-4">
+  <Frontend
+    iconSize={iconSize}
+    class={"border-b border-r rounded-br-lg p-2 transition hover:shadow-lg"}
+  />
+  <Backend
+    iconSize={iconSize}
+    class={"md:border-b border-l md:rounded-bl-lg p-2 transition hover:shadow-lg"}
+  />
+  <Database
+    iconSize={iconSize}
+    class={"border-t border-r rounded-tr-lg p-2 transition hover:shadow-lg"}
+  />
+  <Versioning
+    iconSize={iconSize}
+    class={"border-t border-l rounded-tl-lg p-2 transition hover:shadow-lg"}
+  />
+</div>

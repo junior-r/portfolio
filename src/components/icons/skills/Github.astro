@@ -1,9 +1,9 @@
-<div class="dark:bg-white rounded-full">
-  <svg
-    viewBox="0 -3.5 256 256"
-    {...Astro.props}
-    preserveAspectRatio="xMinYMin meet"
-    fill="#000000"
+---
+const { iconSize } = Astro.props;
+---
+
+<div class={`dark:bg-white rounded-full ${iconSize}`}>
+  <svg viewBox="0 -3.5 256 256" {...Astro.props} fill="#000000"
     ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
       id="SVGRepo_tracerCarrier"
       stroke-linecap="round"

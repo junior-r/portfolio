@@ -1,0 +1,44 @@
+---
+import Tailwind from "../icons/skills/Tailwind.astro";
+import Shadcn from "../icons/skills/Shadcn.astro";
+import Html from "../icons/skills/Html.astro";
+import Css from "../icons/skills/Css.astro";
+import Javascript from "../icons/skills/Javascript.astro";
+import React from "../icons/skills/React.astro";
+import AstroIcon from "../icons/skills/AstroIcon.astro";
+import Nextjs from "../icons/skills/Nextjs.astro";
+import SkillCard from "../SkillCard.astro";
+import TitleSkills from "./TitleSkills.astro";
+
+const { iconSize } = Astro.props;
+---
+
+<section {...Astro.props}>
+  <TitleSkills> Frontend </TitleSkills>
+  <div class="flex gap-6 items-center flex-wrap">
+    <SkillCard text="+3 Años" name="HTML">
+      <Html class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+3 Años" name="CSS">
+      <Css class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+2 Años" name="JavaScript">
+      <Javascript class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+2 Años" name="Tailwind">
+      <Tailwind class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+2 Años" name="ShadCN">
+      <Shadcn class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+1 Año" name="React">
+      <React class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+1 Año" name="Astro">
+      <AstroIcon extraClassName={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+1 Año" name="NextJS">
+      <Nextjs class={`${iconSize}`} />
+    </SkillCard>
+  </div>
+</section>

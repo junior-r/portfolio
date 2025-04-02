@@ -1,0 +1,32 @@
+---
+import Python from "../icons/skills/Python.astro";
+import Django from "../icons/skills/Django.astro";
+import Docker from "../icons/skills/Docker.astro";
+import Nodejs from "../icons/skills/Nodejs.astro";
+import Expressjs from "../icons/skills/Expressjs.astro";
+import SkillCard from "../SkillCard.astro";
+import TitleSkills from "./TitleSkills.astro";
+
+const { iconSize } = Astro.props;
+---
+
+<section {...Astro.props}>
+  <TitleSkills> Backend </TitleSkills>
+  <div class="flex gap-6 items-center flex-wrap">
+    <SkillCard text="+2 Años" name="Python">
+      <Python class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+2 Años" name="Django">
+      <Django class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+1 Año" name="NodeJS">
+      <Nodejs class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+1 Año" name="ExpressJS">
+      <Expressjs extraClassName={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text="+1 Año" name="Docker">
+      <Docker class={`${iconSize}`} />
+    </SkillCard>
+  </div>
+</section>
