@@ -5,6 +5,8 @@ import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import GitHub from "./icons/GitHub.astro";
 import Instagram from "./icons/Instagram.astro";
+
+const availableForWork = false;
 ---
 
 <div class="max-w-xl">
@@ -20,7 +22,7 @@ import Instagram from "./icons/Instagram.astro";
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
     >
-      <Badge>Disponible para trabajar</Badge>
+      {availableForWork && <Badge>Disponible para trabajar</Badge>}
     </a>
   </div>
   <h1
