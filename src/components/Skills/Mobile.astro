@@ -1,0 +1,21 @@
+---
+import { getXPYears } from "@/utils/getXPYears";
+import Flutter from "../icons/skills/Flutter.astro";
+import Kotlin from "../icons/skills/Kotlin.astro";
+import SkillCard from "../SkillCard.astro";
+import TitleSkills from "./TitleSkills.astro";
+
+const { iconSize } = Astro.props;
+---
+
+<section {...Astro.props}>
+  <TitleSkills> Móvil </TitleSkills>
+  <div class="flex gap-6 items-center flex-wrap">
+    <SkillCard text={`+${getXPYears(2025)} Años`} name="Kotlin">
+      <Kotlin class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text={`+${getXPYears(2025)} Años`} name="Flutter">
+      <Flutter class={`${iconSize}`} />
+    </SkillCard>
+  </div>
+</section>

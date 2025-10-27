@@ -1,6 +1,8 @@
 ---
+import { getXPYears } from "@/utils/getXPYears";
 import MySQL from "../icons/skills/MySQL.astro";
 import Postgresql from "../icons/skills/Postgresql.astro";
+import Prisma from "../icons/skills/Prisma.astro";
 import SkillCard from "../SkillCard.astro";
 import TitleSkills from "./TitleSkills.astro";
 
@@ -10,11 +12,14 @@ const { iconSize } = Astro.props;
 <section {...Astro.props}>
   <TitleSkills> Bases de Datos </TitleSkills>
   <div class="flex gap-6 items-center flex-wrap">
-    <SkillCard text="+2 Años" name="PostgreSQL">
+    <SkillCard text={`+${getXPYears(2023)} Años`} name="PostgreSQL">
       <Postgresql class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+1 Año" name="MySQL">
+    <SkillCard text={`+${getXPYears(2025)} Años`} name="MySQL">
       <MySQL class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text={`+${getXPYears(2025)} Años`} name="Prisma">
+      <Prisma class={`${iconSize}`} />
     </SkillCard>
   </div>
 </section>

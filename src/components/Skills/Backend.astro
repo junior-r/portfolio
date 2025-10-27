@@ -6,6 +6,8 @@ import Nodejs from "../icons/skills/Nodejs.astro";
 import Expressjs from "../icons/skills/Expressjs.astro";
 import SkillCard from "../SkillCard.astro";
 import TitleSkills from "./TitleSkills.astro";
+import Java from "../icons/skills/Java.astro";
+import { getXPYears } from "@/utils/getXPYears";
 
 const { iconSize } = Astro.props;
 ---
@@ -13,19 +15,22 @@ const { iconSize } = Astro.props;
 <section {...Astro.props}>
   <TitleSkills> Backend </TitleSkills>
   <div class="flex gap-6 items-center flex-wrap">
-    <SkillCard text="+2 Años" name="Python">
+    <SkillCard text={`+${getXPYears(2023)} Años`} name="Python">
       <Python class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+2 Años" name="Django">
+    <SkillCard text={`+${getXPYears(2023)} Años`} name="Django">
       <Django class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+1 Año" name="NodeJS">
+    <SkillCard text={`+${getXPYears(2023)} Años`} name="NodeJS">
       <Nodejs class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+1 Año" name="ExpressJS">
-      <Expressjs extraClassName={`${iconSize}`} />
+    <SkillCard text={`+${getXPYears(2025)} Años`} name="ExpressJS">
+      <Expressjs class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+1 Año" name="Docker">
+    <SkillCard text={`+${getXPYears(2025)} Años`} name="Java">
+      <Java class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text={`+${getXPYears(2025)} Años`} name="Docker">
       <Docker class={`${iconSize}`} />
     </SkillCard>
   </div>

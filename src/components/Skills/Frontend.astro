@@ -9,6 +9,8 @@ import AstroIcon from "../icons/skills/AstroIcon.astro";
 import Nextjs from "../icons/skills/Nextjs.astro";
 import SkillCard from "../SkillCard.astro";
 import TitleSkills from "./TitleSkills.astro";
+import TypeScript from "../icons/skills/TypeScript.astro";
+import { getXPYears } from "@/utils/getXPYears";
 
 const { iconSize } = Astro.props;
 ---
@@ -16,28 +18,31 @@ const { iconSize } = Astro.props;
 <section {...Astro.props}>
   <TitleSkills> Frontend </TitleSkills>
   <div class="flex gap-6 items-center flex-wrap">
-    <SkillCard text="+3 Años" name="HTML">
+    <SkillCard text={`+${getXPYears(2022)} Años`} name="HTML">
       <Html class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+3 Años" name="CSS">
+    <SkillCard text={`+${getXPYears(2022)} Años`} name="CSS">
       <Css class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+2 Años" name="JavaScript">
+    <SkillCard text={`+${getXPYears(2022)} Años`} name="JavaScript">
       <Javascript class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+2 Años" name="Tailwind">
+    <SkillCard text={`+${getXPYears(2023)} Años`} name="TypeScript">
+      <TypeScript class={`${iconSize}`} />
+    </SkillCard>
+    <SkillCard text={`+${getXPYears(2023)} Años`} name="Tailwind">
       <Tailwind class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+2 Años" name="ShadCN">
+    <SkillCard text={`+${getXPYears(2024)} Años`} name="ShadCN">
       <Shadcn class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+1 Año" name="React">
+    <SkillCard text={`+${getXPYears(2024)} Años`} name="React">
       <React class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+1 Año" name="Astro">
+    <SkillCard text={`+${getXPYears(2024)} Años`} name="Astro">
       <AstroIcon extraClassName={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+1 Año" name="NextJS">
+    <SkillCard text={`+${getXPYears(2024)} Años`} name="NextJS">
       <Nextjs class={`${iconSize}`} />
     </SkillCard>
   </div>

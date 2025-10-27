@@ -3,17 +3,18 @@ import GitLight from "../icons/skills/GitLight.astro";
 import GitHub from "../icons/skills/Github.astro";
 import SkillCard from "../SkillCard.astro";
 import TitleSkills from "./TitleSkills.astro";
+import { getXPYears } from "@/utils/getXPYears";
 
 const { iconSize } = Astro.props;
 ---
 
 <section {...Astro.props}>
-  <TitleSkills> Contro de versiones </TitleSkills>
+  <TitleSkills> Control de versiones </TitleSkills>
   <div class="flex gap-6 items-center flex-wrap">
-    <SkillCard text="+2 Años" name="Git">
+    <SkillCard text={`+${getXPYears(2022)} Años`} name="Git">
       <GitLight class={`${iconSize}`} />
     </SkillCard>
-    <SkillCard text="+2 Años" name="GitHub">
+    <SkillCard text={`+${getXPYears(2022)} Años`} name="GitHub">
       <GitHub iconSize={iconSize} />
     </SkillCard>
   </div>
