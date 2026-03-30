@@ -1,0 +1,13 @@
+---
+import { certificates } from "@/data/certificates";
+import CertificateCard from "./Card.astro";
+import { sortCerts } from "@/utils/cert";
+---
+
+<div class="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
+  {
+    sortCerts(certificates).map((cert) => (
+      <CertificateCard certificate={cert} />
+    ))
+  }
+</div>

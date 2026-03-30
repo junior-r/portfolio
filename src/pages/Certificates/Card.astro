@@ -1,0 +1,54 @@
+---
+import type { Certificate } from "@/types/certificate";
+
+interface Props {
+  certificate: Certificate;
+}
+
+const { certificate } = Astro.props;
+---
+
+<article
+  class="group bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-500 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/50 flex flex-col"
+>
+  <a
+    href={certificate.validationUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="block overflow-hidden relative aspect-[4/3] bg-gray-50 dark:bg-gray-900"
+  >
+    <img
+      src={certificate.imageUrl}
+      alt={`Certificado ${certificate.title}`}
+      loading="lazy"
+      class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+    />
+
+    <div
+      class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    >
+      <span
+        class="text-white font-medium text-sm bg-white/20 px-5 py-2 rounded-full backdrop-blur-sm"
+      >
+        Ver credencial
+      </span>
+    </div>
+  </a>
+
+  <div class="p-6 flex flex-col gap-2">
+    <h3
+      class="m-0 text-lg font-semibold text-gray-900 dark:text-gray-100 leading-snug"
+    >
+      {certificate.title}
+    </h3>
+    <div
+      class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400"
+    >
+      <span class="font-medium">{certificate.issuer}</span>
+      <span class="text-gray-300 dark:text-gray-600 text-xs">•</span>
+      <span>{certificate.language}</span>
+      <span class="text-gray-300 dark:text-gray-600 text-xs">•</span>
+      <span>{certificate.date}</span>
+    </div>
+  </div>
+</article>

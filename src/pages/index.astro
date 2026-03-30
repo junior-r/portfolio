@@ -1,12 +1,16 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 
-import AboutMe from "@/components/AboutMe.astro";
-import Skills from "@/components/Skills/Index.astro";
+import ExperiencePages from "@/pages/Experience/index.astro";
+import SkillsPage from "@/pages/Skills/index.astro";
+import CertificatesPage from "@/pages/Certificates/index.astro";
+import AboutMePage from "@/pages/AboutMe/index.astro";
+
 import Briefcase from "@/components/icons/Briefcase.astro";
 import CodeIcon from "@/components/icons/Code.astro";
-import Experience from "@/components/Experience.astro";
+import Graduation from "@/components/icons/Graduation.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import TitleSection from "@/components/TitleSection.astro";
@@ -22,12 +26,12 @@ import TitleSection from "@/components/TitleSection.astro";
     </SectionContainer>
   </main>
   <div class="space-y-24">
-    <SectionContainer id="experiencia">
+    <SectionContainer id="experience">
       <TitleSection>
         <Briefcase class="size-8" />
         Experiencia laboral
       </TitleSection>
-      <Experience />
+      <ExperiencePages />
     </SectionContainer>
 
     <SectionContainer id="skills">
@@ -35,15 +39,23 @@ import TitleSection from "@/components/TitleSection.astro";
         <CodeIcon class="size-8" />
         Skills
       </TitleSection>
-      <Skills />
+      <SkillsPage />
     </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
+    <SectionContainer id="certificates">
+      <TitleSection>
+        <Graduation class="size-8" />
+        Certificados
+      </TitleSection>
+      <CertificatesPage />
+    </SectionContainer>
+
+    <SectionContainer id="about-me">
       <TitleSection>
         <ProfileCheck class="size-8" />
         Sobre mí
       </TitleSection>
-      <AboutMe />
+      <AboutMePage />
     </SectionContainer>
   </div>
 </Layout>

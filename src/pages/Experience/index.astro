@@ -1,23 +1,23 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro";
-import HTMLIcon from "./icons/skills/Html.astro";
-import CSS from "./icons/skills/Css.astro";
-import JavaScript from "./icons/skills/Javascript.astro";
-import React from "./icons/skills/React.astro";
-import Tailwind from "./icons/skills/Tailwind.astro";
-import Python from "./icons/skills/Python.astro";
-import Django from "./icons/skills/Django.astro";
-import Postgresql from "./icons/skills/Postgresql.astro";
-import Git from "./icons/skills/GitLight.astro";
-import Github from "./icons/skills/Github.astro";
-import AstroIcon from "./icons/skills/AstroIcon.astro";
-import Nodejs from "./icons/skills/Nodejs.astro";
-import Expressjs from "./icons/skills/Expressjs.astro";
-import Prisma from "./icons/skills/Prisma.astro";
-import TypeScript from "./icons/skills/TypeScript.astro";
-import Flutter from "./icons/skills/Flutter.astro";
-import Kotlin from "./icons/skills/Kotlin.astro";
-import Java from "./icons/skills/Java.astro";
+import ExperienceCard from "./Card.astro";
+import HTMLIcon from "@/components/icons/skills/Html.astro";
+import CSS from "@/components/icons/skills/Css.astro";
+import JavaScript from "@/components/icons/skills/Javascript.astro";
+import React from "@/components/icons/skills/React.astro";
+import Tailwind from "@/components/icons/skills/Tailwind.astro";
+import Python from "@/components/icons/skills/Python.astro";
+import Django from "@/components/icons/skills/Django.astro";
+import Postgresql from "@/components/icons/skills/Postgresql.astro";
+import Git from "@/components/icons/skills/GitLight.astro";
+import Github from "@/components/icons/skills/Github.astro";
+import AstroIcon from "@/components/icons/skills/AstroIcon.astro";
+import Nodejs from "@/components/icons/skills/Nodejs.astro";
+import Expressjs from "@/components/icons/skills/Expressjs.astro";
+import Prisma from "@/components/icons/skills/Prisma.astro";
+import TypeScript from "@/components/icons/skills/TypeScript.astro";
+import Flutter from "@/components/icons/skills/Flutter.astro";
+import Kotlin from "@/components/icons/skills/Kotlin.astro";
+import Java from "@/components/icons/skills/Java.astro";
 
 const EXPERIENCE = [
   {
@@ -106,7 +106,7 @@ const EXPERIENCE = [
   {
     EXPERIENCE.map((experience) => (
       <li class="">
-        <ExperienceItem {...experience} />
+        <ExperienceCard {...experience} />
       </li>
     ))
   }
