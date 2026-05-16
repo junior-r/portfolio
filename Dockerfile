@@ -6,7 +6,9 @@ RUN corepack enable pnpm
 
 COPY package.json pnpm-lock.yaml* ./
 
-RUN pnpm install --config.strict-peer-dependencies=false
+RUN pnpm install --ignore-scripts --config.strict-peer-dependencies=false
+
+RUN pnpm rebuild esbuild sharp
 
 COPY . .
 
